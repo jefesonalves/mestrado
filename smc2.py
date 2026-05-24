@@ -27,7 +27,6 @@ valor_z = np.array([], np.int16)
 # Construção das colunas
 print("-" * 75)
 print(f"{'Simulação':<21} {'X definido':<10} {'X gerado':<10} {'Y definido':<10} {'Y gerado':<7} {'Z calculado'}")
-# print(f"{'Simulação':<21}  {'X':<10}  {'Y':<10} {'Z'}")
 print("-" * 75)
 
 # Loop para realizar iterações de acordo com a quantidade de simulações
