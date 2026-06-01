@@ -33,19 +33,25 @@ print("-" * 75)
 for i in range(0, num_simulacoes):
     if x[i] <= 20:
         valor_x = np.append(valor_x, 10)        
+    
     elif x[i] > 20 and x[i] <= 70:
         valor_x = np.append(valor_x, 12)        
+    
     elif x[i] > 70 and x[i] <= 100:
         valor_x = np.append(valor_x, 15)
+    
     else:
         print (f"Valor inválido")
     
     if y[i] <= 40:
         valor_y = np.append(valor_y, 8)
+    
     elif y[i] > 40 and y[i] <= 90:
         valor_y = np.append(valor_y, 9)
+    
     elif y[i] > 90 and y[i] <= 100:
         valor_y = np.append(valor_y, 10)        
+    
     else:
         print (f"Valor inválido")
 
@@ -55,7 +61,7 @@ for i in range(0, num_simulacoes):
     print("-" * 75)
 
 print("-" * 75)
-media_z = sum(valor_z) / num_simulacoes
+media_z = valor_z.mean()
 print (f"Média de Z: {media_z:,.2f} ")
 print("-" * 75)
 
