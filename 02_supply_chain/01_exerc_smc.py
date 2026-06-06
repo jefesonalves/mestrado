@@ -12,6 +12,9 @@ import time
 # Inicia a contagem do tempo de execução do código.
 inicio_simulacao = time.perf_counter()
 
+# Limpa a tela
+print('\033c', end='')
+
 # Quantidade de simulações
 num_simulacoes = 10
 
@@ -25,9 +28,14 @@ valor_y = np.array([], np.int16)
 valor_z = np.array([], np.int16)
 
 # Construção das colunas
-print("-" * 75)
-print(f"{'Simulação':<21} {'X definido':<10} {'X gerado':<10} {'Y definido':<10} {'Y gerado':<7} {'Z calculado'}")
-print("-" * 75)
+titulo = "Simulação de Monte Carlo com um array de X e Y definidos."
+print("-" * 82)
+print(f"{titulo:^85}")
+print("-" * 82)
+print("" * 82)
+print("-" * 82)
+print(f"{'Simulação':<21} {'X definido':<10} {'X(10, 12 ou 15)':<10} {'Y definido':<10} {'Y(8, 9 ou 10)':<7} {'Z(2x+3y)'}")
+print("-" * 82)
 
 # Loop para realizar iterações de acordo com a quantidade de simulações
 for i in range(0, num_simulacoes):
@@ -57,13 +65,14 @@ for i in range(0, num_simulacoes):
 
     valor_z = 2 * valor_x + 3 * valor_y
 
-    print (f"Simulação: {i + 1:<10} {x[i]:<10} {valor_x[i]:<10} {y[i]:<10} {valor_y[i]:<8} {valor_z[i]}")
-    print("-" * 75)
+    print (f"Simulação: {i + 1:<10} {x[i]:^10} {valor_x[i]:^15} {y[i]:^10} {valor_y[i]:^13} {valor_z[i]:^8}")
+    print("-" * 82)
 
-print("-" * 75)
+print("" * 82)
+print("-" * 82)
 media_z = valor_z.mean()
 print (f"Média de Z: {media_z:,.2f} ")
-print("-" * 75)
+print("-" * 82)
 
 # Finaliza a contagem do tempo de execução do código ao executar as simulações.
 fim_simulacao = time.perf_counter()

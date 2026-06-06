@@ -9,11 +9,17 @@ Professora: Luciana Gondim de A. Guimarães
 import numpy as np
 import time
 
+# Limpa a tela
+print('\033c', end='')
+
 # Quantidade de simulações
 num_simulacoes = int(input("Digite o número de simulações: "))
 
 # Inicia a contagem do tempo de execução do código após o usuário digitar a quantidade de simulações.
 inicio_simulacao = time.perf_counter()
+
+# Limpa a tela
+print('\033c', end='')
 
 # Valores randômicos gerados de acordo com o número de simulações 0 a 100 
 x = np.random.randint(low=0, high=100, size=num_simulacoes)
@@ -25,9 +31,13 @@ valor_y = np.array([], np.int16)
 valor_z = np.array([], np.int16)
 
 # Construção das colunas
-print("-" * 75)
-print(f"{'Simulação':<21} {'X definido':<10} {'X gerado':<10} {'Y definido':<10} {'Y gerado':<7} {'Z calculado'}")
-print("-" * 75)
+print("-" * 85)
+print(f"{' ' * 14}Simulação de Monte Carlo com um array de X e Y gerados.")
+print("-" * 85)
+print("" * 85)
+print("-" * 85)
+print(f"{'Simulação':<21} {'X(0 a 100)':<10} {'X(10, 12 ou 15)':<10} {'Y(0 a 100)':<10} {'Y(8, 9 ou 10)':<7} {'Z(2x+3y)'}")
+print("-" * 85)
 
 # Loop para realizar iterações de acordo com a quantidade de simulações
 for i in range(0, num_simulacoes):
@@ -57,14 +67,13 @@ for i in range(0, num_simulacoes):
     
     valor_z = 2 * valor_x + 3 * valor_y
 
-    print (f"Simulação: {i + 1:<10} {x[i]:<10} {valor_x[i]:<10} {y[i]:<10} {valor_y[i]:<8} {valor_z[i]}")
-    # print (f"Simulação: {i + 1:<10}  {valor_x[i]:<10}  {valor_y[i]:<10} {valor_z[i]}")
-    print("-" * 75)
+    print (f"Simulação: {i + 1:<10} {x[i]:<10} {valor_x[i]:<15} {y[i]:<10} {valor_y[i]:<13} {valor_z[i]}")
+    print("-" * 85)
 
-print("-" * 75)
+print("-" * 85)
 media_z = valor_z.mean()
 print (f"Média de Z: {media_z:,.2f} ")
-print("-" * 75)
+print("-" * 85)
 
 # Finaliza a contagem do tempo de execução do código ao executar as simulações.
 fim_simulacao = time.perf_counter()
