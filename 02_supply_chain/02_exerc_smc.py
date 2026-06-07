@@ -1,8 +1,8 @@
 """
 Mestrado Profissional em Administração - UNP
-Disciplina: Gestão da Cadeia de Suprimentos (Gestão de Operações)
-Exercício B - Simulação de Monte Carlo com o número de simulações a definir
-Professora: Luciana Gondim de A. Guimarães
+Disciplina: Gestão da Cadeia de Suprimentos (Gestão de Operações).
+Exercício B - Simulação de Monte Carlo com o número de simulações a definir.
+Professora: Luciana Gondim de A. Guimarães.
 """
 
 # Alias para a biblioteca numpy importada
